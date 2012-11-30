@@ -8,7 +8,6 @@ import java.util.Map;
 import static java.nio.file.StandardWatchEventKinds.*;
 
 public class OnChange {
-
     /**
      * Main program.
      * * @param args Command line arguments - dirs to watch.
