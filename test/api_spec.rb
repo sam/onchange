@@ -11,19 +11,47 @@ describe OnChange do
 
   describe "new" do
     it "must take an Array of Paths to monitor" do
-      OnChange.new("ext/java", "test")
+      OnChange.new("ext/java/**/*.java", "test/**/*_{test,spec}.rb").bind do |path, event|
+
+      end
+
+      OnChange.new("public").deleted do |path|
+        cache.remove(path)
+      end
+
+      "ext", "java", "**", "*.java"
+
     end
   end
 
   describe "filter" do
     it "must take a list of matchers" do
-      OnChange.new.filter("*.java", "*.rb")
+      OnChange.new(".").filter("*.java", "*.rb").start do |path, event|
+
+      end
+
+      OnChange.new(".").created do |path|
+
+      end.modified do |path|
+
+      end.deleted do |path|
+
+      end
     end
   end
 
   describe "bind" do
     it "must require a PathChangeHandler" do
       OnChange.new(".").bind { |path, event| }
+
+
+      OnChange.new(".").bind do |path, event|
+        case event
+          when StandardWatchEventKinds.ENTRY_CREATE then
+
+        end
+
+      end
     end
 
     it "must block" do
