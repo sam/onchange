@@ -4,7 +4,7 @@ Doubleshot.new do |config|
 
   config.project = "onchange"
   config.group   = "org.substantiality"
-  config.version = "0.0.1-alpha"
+  config.version = "0.0.1.alpha"
 
   if ENV["TRAVIS"]
     config.mvn_repository "http://maven.mirrors.travis-ci.org/nexus/content/groups/public/"
