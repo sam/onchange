@@ -2,9 +2,9 @@
 
 Doubleshot.new do |config|
 
-  config.project = "doubleshot-watcher"
-  config.group   = "org.sam.doubleshot"
-  config.version = "0.1.0"
+  config.project = "onchange"
+  config.group   = "org.substantiality"
+  config.version = "0.0.1-alpha"
 
   if ENV["TRAVIS"]
     config.mvn_repository "http://maven.mirrors.travis-ci.org/nexus/content/groups/public/"
@@ -25,17 +25,13 @@ Doubleshot.new do |config|
   end
 
   config.gemspec do |spec|
-    spec.summary        = "Cotton is a JRuby Web Application Framework"
+    spec.summary        = "OnChange is a File System Monitor for JRuby/Java"
     spec.description    = <<-DESCRIPTION
-Cotton is a JRuby exclusive Web Application Framework.
-
-It takes the best of Ruby frameworks, like REST style routing, asset packaging
-and mountable apps, and adds a few tricks of it's own like first-class Forms,
-clustered caches and Sessions, and performance++.
-
-We aim to ensure Cotton is the fastest platform for Ruby on the Web, period.
+    OnChange is a File System Monitor for JRuby/Java similar to the Listen
+or Watchr gems. Since the underlying library used is Java7's WatchService,
+it's Ruby support is limited to JRuby, and you must be running Java7.
 DESCRIPTION
-    spec.homepage       = "https://github.com/sam/doubleshot-watcher"
+    spec.homepage       = "https://github.com/sam/onchange"
     spec.author         = "Sam Smoot"
     spec.email          = "ssmoot@gmail.com"
     spec.license        = "MIT-LICENSE"

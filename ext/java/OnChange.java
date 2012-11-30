@@ -1,3 +1,5 @@
+package org.substantiality;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.HashMap;
@@ -5,7 +7,7 @@ import java.util.Map;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 
-public class Watcher {
+public class OnChange {
 
     /**
      * Main program.
