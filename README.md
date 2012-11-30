@@ -1,4 +1,4 @@
-doubleshot-watcher
+OnChange
 ==================
 
-File System Watcher for Doubleshot based on JDK7's java.nio.file.WatchService
+File System Watcher based on JDK7's java.nio.file.WatchService
