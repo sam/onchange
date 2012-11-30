@@ -6,6 +6,8 @@ Doubleshot.new do |config|
   config.group   = "org.substantiality"
   config.version = "0.0.1.alpha"
 
+  config.java_main = "org.substantiality.OnChange"
+
   if ENV["TRAVIS"]
     config.mvn_repository "http://maven.mirrors.travis-ci.org/nexus/content/groups/public/"
     config.mvn_repository "http://maven.mirrors.travis-ci.org/nexus/content/repositories/apache/"

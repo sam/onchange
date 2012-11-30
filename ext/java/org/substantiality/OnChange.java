@@ -18,7 +18,7 @@ public class OnChange {
         final FileSystem fileSystem = FileSystems.getDefault();
         try (final WatchService watchService = fileSystem.newWatchService()) {
             final Map<WatchKey, Path> keyMap = new HashMap<WatchKey, Path>();
-            for (final String arg : args.length > 0 ? args : new String[]{"."}) {
+            for (final String arg : args.length > 0 ? args : new String[]{"test/**/*.rb"}) {
                 final Path path = Paths.get(arg);
                 keyMap.put(path.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY), path);
             }
