@@ -4,7 +4,7 @@
 
 require_relative "helper"
 
-describe org.sam.cotton.PublicFileHandler do
+describe org.substantiality.OnChange do
   it "is a place-holder" do
     skip
   end
