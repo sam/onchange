@@ -31,7 +31,8 @@ public class PathPattern {
       }
     }
 
-    _matcher = FileSystems.getDefault().getPathMatcher(pattern.toString());
+    if(pattern.length() != 0)
+      _matcher = FileSystems.getDefault().getPathMatcher(pattern.toString());
   }
 
   public boolean match(String path) {

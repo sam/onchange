@@ -2,16 +2,20 @@ package org.substantiality;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class OnChange {
 
-    PathPattern[] _paths;
+    List<PathPattern> _paths = new ArrayList<PathPattern>();
 
     public OnChange(final String... paths) {
-//        this._paths = paths;
+      for(String path: paths)
+        _paths.add(new PathPattern(path));
     }
 
-    public PathPattern[] getPaths() {
+    public List<PathPattern> getPaths() {
         return _paths;
     }
 
